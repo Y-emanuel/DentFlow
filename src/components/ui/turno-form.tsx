@@ -193,11 +193,8 @@ export function TurnoForm() {
       noValidate
       aria-label="Formulario de solicitud de turno"
     >
-      {/* Honeypot - oculto visualmente, accesible para screen readers pero ignorado */}
-      <div
-        className="absolute -left-[9999px]"
-        aria-hidden="true"
-      >
+      {/* Honeypot - oculto para humanos, visible para bots */}
+      <div className="sr-only" aria-hidden="true">
         <label htmlFor="website">{TEXTOS.turno.form.honeypotLabel}</label>
         <input
           type="text"
@@ -311,6 +308,7 @@ export function TurnoForm() {
                   : 'border-[var(--color-border)] bg-white hover:border-[var(--color-primary)]/40'
               }`}
               aria-pressed={values.franjaHoraria === 'MANANA'}
+              aria-label="Seleccionar horario de mañana de 9 a 13 hs"
             >
               <Sun
                 className={`h-6 w-6 ${
@@ -341,6 +339,7 @@ export function TurnoForm() {
                   : 'border-[var(--color-border)] bg-white hover:border-[var(--color-primary)]/40'
               }`}
               aria-pressed={values.franjaHoraria === 'TARDE'}
+              aria-label="Seleccionar horario de tarde de 14 a 18 hs"
             >
               <Moon
                 className={`h-6 w-6 ${

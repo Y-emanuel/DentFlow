@@ -57,7 +57,7 @@ export function TestimonialCarousel({ testimonios }: TestimonialCarouselProps) {
   return (
     <div className="relative mx-auto max-w-3xl">
       {/* Card del testimonio */}
-      <div className="relative overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-8 shadow-soft md:p-10">
+      <figure className="relative overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-8 shadow-soft md:p-10">
         <Quote
           className="absolute top-6 right-6 h-12 w-12 text-[var(--color-primary)]/10"
           aria-hidden="true"
@@ -93,7 +93,7 @@ export function TestimonialCarousel({ testimonios }: TestimonialCarouselProps) {
             </p>
           </div>
         </figcaption>
-      </div>
+      </figure>
 
       {/* Controles */}
       <div className="mt-6 flex items-center justify-center gap-4">

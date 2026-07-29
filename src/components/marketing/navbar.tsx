@@ -40,6 +40,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 className="text-sm font-medium text-[var(--color-muted-foreground)] hover:text-[var(--color-foreground)] transition-colors"
+                aria-current="page"
               >
                 {link.label}
               </a>

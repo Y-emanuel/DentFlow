@@ -48,7 +48,6 @@ export default function RootLayout({
     <html
       lang="es-AR"
       className={`${inter.variable} ${plusJakarta.variable}`}
-      suppressHydrationWarning
     >
       <head>
         {/* JSON-LD para rich snippets - en head para mejor SEO y rendimiento */}

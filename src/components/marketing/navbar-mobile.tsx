@@ -126,6 +126,7 @@ export function NavbarMobile() {
                   onClick={handleLinkClick}
                   className="block rounded-lg px-4 py-3 text-base font-medium hover:bg-slate-100 transition-colors"
                   style={{ color: '#0f172a' }}
+                  aria-current="page"
                 >
                   {link.label}
                 </a>
