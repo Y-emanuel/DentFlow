@@ -1,6 +1,7 @@
 /**
  * Layout raíz de DentFlow.
  * Configura html lang es-AR, fonts Inter y Plus Jakarta Sans, metadata global.
+ * JSON-LD movido al <head> para mejor rendimiento y SEO.
  */
 
 import type { Metadata, Viewport } from 'next';
@@ -36,6 +37,7 @@ export const metadata: Metadata = siteMetadata;
 
 /**
  * Layout raíz que envuelve toda la aplicación.
+ * JSON-LD inyectado en <head> para mejor rendimiento de renderizado.
  */
 export default function RootLayout({
   children,
@@ -48,9 +50,8 @@ export default function RootLayout({
       className={`${inter.variable} ${plusJakarta.variable}`}
       suppressHydrationWarning
     >
-      <body className="antialiased">
-        {children}
-        {/* JSON-LD para rich snippets */}
+      <head>
+        {/* JSON-LD para rich snippets - en head para mejor SEO y rendimiento */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,6 +64,9 @@ export default function RootLayout({
             __html: JSON.stringify(faqPageJsonLd),
           }}
         />
+      </head>
+      <body className="antialiased">
+        {children}
       </body>
     </html>
   );

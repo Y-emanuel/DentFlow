@@ -1,5 +1,17 @@
 @import 'tailwindcss';
 
+/* Animaciones personalizadas para reveal y stagger */
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @theme {
   /* Paleta DentFlow - Confianza clínica */
   --color-background: #ffffff;
@@ -135,11 +147,6 @@
       0 12px 32px -4px rgb(15 23 42 / 0.1);
   }
 
-  /* Clases responsive adicionales */
-  .text-balance {
-    text-wrap: balance;
-  }
-  
   html, body {
     max-width: 100vw;
     overflow-x: hidden;

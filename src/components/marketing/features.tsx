@@ -56,7 +56,7 @@ export function Features() {
           {TEXTOS.features.items.map((item, index) => {
             const Icon = ICONS[index] ?? Clock;
             return (
-              <StaggerItem key={item.title}>
+              <StaggerItem key={item.title} index={index}>
                 <div className="h-full rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-6 shadow-soft transition-shadow hover:shadow-soft-lg">
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-[var(--color-primary)]/10">
                     <Icon

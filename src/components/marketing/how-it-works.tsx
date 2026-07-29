@@ -42,7 +42,7 @@ export function HowItWorks() {
           {TEXTOS.howItWorks.steps.map((step, index) => {
             const Icon = STEP_ICONS[index] ?? ListChecks;
             return (
-              <StaggerItem key={step.number}>
+              <StaggerItem key={step.number} index={index}>
                 <div className="relative flex flex-col items-center text-center">
                   {/* Conector entre pasos (desktop) */}
                   {index < TEXTOS.howItWorks.steps.length - 1 && (
